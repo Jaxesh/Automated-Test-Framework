@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dashboard>
+    <label>My Dashboard</label>
+    <description>A sample dashboard for demonstration purposes.</description>
+    <row>
+        <panel>
+            <title>Search Results</title>
+            <table>
+                <search>
+                    <query>index=my_index | stats count by field_name</query>
+                    <earliest>-15m</earliest>
+                    <latest>now</latest>
+                </search>
+                <options>
+                    <count>10</count>
+                </options>
+            </table>
+        </panel>
+    </row>
+    <row>
+        <panel>
+            <title>Time Series Chart</title>
+            <chart>
+                <search>
+                    <query>index=my_index | timechart span=1h count</query>
+                    <earliest>-1d</earliest>
+                    <latest>now</latest>
+                </search>
+                <options>
+                    <charting.chart>line</charting.chart>
+                    <charting.axisTitleY>Count</charting.axisTitleY>
+                </options>
+            </chart>
+        </panel>
+    </row>
+</dashboard>

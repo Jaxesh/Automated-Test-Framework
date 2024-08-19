@@ -1,2 +1,17 @@
-# Automated-Test-Framework
-Automated Test Framework: Developed an automated testing framework using Selenium and JUnit to streamline testing processes. Integrated Jenkins for CI/CD pipelines, automating test execution and deployment. Created real-time dashboards and alerts in Splunk to monitor system health and test performance.
+# Automated Test Framework
+
+This project demonstrates an automated test framework using Selenium and JUnit, integrated with Jenkins for continuous integration and Splunk for monitoring.
+
+## Setup
+
+1. **Dependencies**: Ensure you have `Maven` and `Chromedriver` installed.
+2. **Configuration**: Update `path/to/chromedriver` in `TestBase.java`.
+
+## Running Tests
+
+- **Local**: `mvn test`
+- **Jenkins**: The Jenkins pipeline will automatically build and run tests.
+
+## Monitoring
+
+- Configure and use Splunk to monitor test execution and health.
